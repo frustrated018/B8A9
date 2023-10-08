@@ -76,6 +76,7 @@ const Slider = () => {
     fontSize: "30px",
     fontWeight: "200",
     color: "#ffea00",
+    backgroundColor: "rgba(0, 0, 0, 0.5)"
   };
 
   return (
@@ -83,15 +84,12 @@ const Slider = () => {
       <div>
         <Carousel
           data={data}
-          time={2000}
+          time={5000}
           width="1300px"
           height="500px"
           captionStyle={captionStyle}
           captionPosition="bottom"
           automatic={true}
-          dots={true}
-          pauseIconColor="white"
-          pauseIconSize="40px"
           slideBackgroundColor="darkgrey"
           slideImageFit="cover"
           style={{

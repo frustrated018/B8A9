@@ -7,7 +7,7 @@ const Home = () => {
         this is the home page
       </div>
       <div className=" mx-3 md:mx-6 lg:mx-0">
-        <Slider></Slider>
+      <Slider></Slider>
       </div>
     </div>
   );
