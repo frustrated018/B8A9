@@ -3,60 +3,80 @@ import { Carousel } from "react-carousel-minimal";
 const Slider = () => {
   const data = [
     {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
-      caption: `<div>
-                  San Francisco
-                  <br/>
-                  Next line
-                </div>`,
+      image: "https://i.ibb.co/8YMbkL9/wedding.jpg",
+      caption: "Love's big day, unforgettable moments.",
     },
     {
-      image:
-        "https://cdn.britannica.com/s:800x450,c:crop/35/204435-138-2F2B745A/Time-lapse-hyper-lapse-Isle-Skye-Scotland.jpg",
-      caption: "Scotland",
+      image: "https://i.ibb.co/ZgsnKzH/birthday.jpg",
+      caption: "Fun, surprises, and birthday joy.",
     },
     {
-      image:
-        "https://static2.tripoto.com/media/filter/tst/img/735873/TripDocument/1537686560_1537686557954.jpg",
-      caption: "Darjeeling",
+      image: "https://i.ibb.co/4KX7sby/aniversary.jpg",
+      caption: "Elegant night celebrating enduring love.",
     },
     {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Palace_of_Fine_Arts_%2816794p%29.jpg/1200px-Palace_of_Fine_Arts_%2816794p%29.jpg",
-      caption: "San Francisco",
+      image: "https://i.ibb.co/3fwVqNj/engagement.jpg",
+      caption: "Celebrating love's next chapter.",
     },
     {
-      image:
-        "https://i.natgeofe.com/n/f7732389-a045-402c-bf39-cb4eda39e786/scotland_travel_4x3.jpg",
-      caption: "Scotland",
+      image: "https://i.ibb.co/F06pJCX/retirement.jpg",
+      caption: "Cheers to a well-deserved retirement.",
     },
     {
-      image:
-        "https://www.tusktravel.com/blog/wp-content/uploads/2020/07/Best-Time-to-Visit-Darjeeling-for-Honeymoon.jpg",
-      caption: "Darjeeling",
+      image: "https://i.ibb.co/gDwqJpY/random.jpg",
+      caption: "Welcoming new life with love.",
     },
     {
-      image:
-        "https://www.omm.com/~/media/images/site/locations/san_francisco_780x520px.ashx",
-      caption: "San Francisco",
+      image: "https://i.ibb.co/J2d0khY/familyreunion.jpg",
+      caption: "Bonds strengthened, memories cherished.",
     },
     {
-      image:
-        "https://images.ctfassets.net/bth3mlrehms2/6Ypj2Qd3m3jQk6ygmpsNAM/61d2f8cb9f939beed918971b9bc59bcd/Scotland.jpg?w=750&h=422&fl=progressive&q=50&fm=jpg",
-      caption: "Scotland",
+      image: "https://i.ibb.co/vVH6KmN/random2.jpg",
+      caption: "New home, warm hearts.",
     },
     {
-      image:
-        "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
-      caption: "Darjeeling",
+      image: "https://i.ibb.co/QcKtWcJ/graduation4.jpg",
+      caption: "High school farewell in style.",
+    },
+    {
+      image: "https://i.ibb.co/pfd4R85/promotion.jpg",
+      caption: "Cheers to career success.",
+    },
+    {
+      image: "https://i.ibb.co/H7pmprB/moivienight.jpg",
+      caption: "Movie magic, themed fun.",
+    },
+    {
+      image: "https://i.ibb.co/GQXknVj/graduation3.jpg",
+      caption: "Farewell to new beginnings.",
+    },
+    {
+      image: "https://i.ibb.co/Wzz5gs3/genderreveal.jpg",
+      caption: "Joyful baby gender reveal.",
+    },
+    {
+      image: "https://i.ibb.co/cN0RLJ1/engagement2.jpg",
+      caption: "Cherishing love's spark.",
+    },
+    {
+      image: "https://i.ibb.co/MD4QmDN/graduation1.jpg",
+      caption: "Diploma in hand, future awaits.",
+    },
+    {
+      image: "https://i.ibb.co/jD2nJks/housewarming.jpg",
+      caption: "New home, new memories.",
+    },
+    {
+      image: "https://i.ibb.co/QdmJXFC/babyshower.jpg",
+      caption: "Celebrating a bundle of joy.",
     },
   ];
 
   const captionStyle = {
-    fontSize: "2em",
-    fontWeight: "bold",
+    fontSize: "30px",
+    fontWeight: "200",
   };
+
   return (
     <>
       <div>
