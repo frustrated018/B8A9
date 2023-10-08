@@ -9,7 +9,7 @@ const Nav = () => {
 
         <img
         className="w-[90px] h-[60px] rounded"
-        src="src/assets/logo.png"
+        src="https://i.ibb.co/LYmmn86/logo.png"
         alt="Logo"
       />
 

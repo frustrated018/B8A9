@@ -75,6 +75,7 @@ const Slider = () => {
   const captionStyle = {
     fontSize: "30px",
     fontWeight: "200",
+    color: "#ffea00",
   };
 
   return (
