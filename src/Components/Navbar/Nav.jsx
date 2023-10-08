@@ -13,6 +13,8 @@ const Nav = () => {
         alt="Logo"
       />
 
+        {/* Text content */}
+
         <ul className=" flex flex-col md:flex-row gap-3 md:gap-12 mt-6 md:mt-0">
           <li className="text-lg font-normal">
             <NavLink
@@ -99,6 +101,11 @@ const Nav = () => {
             </NavLink>
           </li>
         </ul>
+
+
+              {/* User logo and logout button will be here somewhere */}
+
+
       </nav>
     </div>
   );
