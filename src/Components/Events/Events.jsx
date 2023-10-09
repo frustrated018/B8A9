@@ -8,7 +8,7 @@ const Events = ({events}) => {
     <>
       <div className="flex flex-col gap-5">
         {
-          events?.map(eventdata =><Event key={eventdata.id} eventdata={eventdata}></Event>)
+          events?.map(eventData =><Event key={eventData.id} eventData={eventData}></Event>)
         }
       </div>
     </>
