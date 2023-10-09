@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Events from "../../Components/Events/Events";
 import Slider from "../../Components/Slider/Slider";
 import UserReview from "../../Components/UserReview/UserReview";
+import Faq from "../../Faq/Faq";
 
 const Home = () => {
   const events = useLoaderData();
@@ -18,6 +19,9 @@ const Home = () => {
         </div>
         <div className="my-8">
           <UserReview></UserReview>
+        </div>
+        <div className="my-8">
+          <Faq></Faq>
         </div>
       </div>
     </div>
