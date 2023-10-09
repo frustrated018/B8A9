@@ -8,6 +8,7 @@ import Gallery from "../Pages/Gallery/Gallery";
 import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
 import EventDetails from "../Pages/EventDetails/EventDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const Router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact></Contact>,
+        element: <PrivateRoute><Contact></Contact></PrivateRoute>,
       },
       {
         path: "/gallery",
