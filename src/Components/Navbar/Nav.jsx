@@ -5,12 +5,19 @@ import swal from "sweetalert";
 
 const Nav = () => {
   const { user, logOut } = useContext(AuthContext);
+  
 
-  const hadnleLogOut = () =>{
+  const hadnleLogOut = () => {
     logOut()
-    .then(() => swal("Log out Successfull", "Thank you for visiting our site", "success"))
-    .catch(error => console.error(error))
-  }
+      .then(() =>
+        swal(
+          "Log out Successfull",
+          "Thank you for visiting our site",
+          "success"
+        )
+      )
+      .catch((error) => console.error(error));
+  };
 
   return (
     <div className="navbar">
@@ -106,12 +113,17 @@ const Nav = () => {
 
         <div className="navbar-end flex flex-row-reverse gap-3">
           {user && (
-            <button className="px-3 py-2 bg-blue-300 rounded-lg font-semibold" onClick={hadnleLogOut}>
+            <button
+              className="px-3 py-2 bg-blue-300 rounded-lg font-semibold"
+              onClick={hadnleLogOut}
+            >
               Logout
             </button>
           )}
           <div className="w-10">
-            <img src="https://i.ibb.co/HG1zZkj/Screenshot-2023-10-09-160806.png" />
+            <img 
+              src={user?.photoURL}
+            />
           </div>
         </div>
       </nav>
