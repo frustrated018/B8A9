@@ -1,11 +1,15 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate} from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import swal from "sweetalert";
 
 const Login = () => {
   const { logInUser, signInWithGoogle } = useContext(AuthContext);
+  const location = useLocation();
   const navigate = useNavigate();
+
+
+
   const hadnleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -16,7 +20,7 @@ const Login = () => {
         console.log(res.user);
         swal("Login Successful", "Welcome back!", "success");
         e.target.reset();
-        navigate("/");
+        navigate(location?.state? location.state : "/" );
       })
       .catch((error) => {
         console.error(error);
@@ -27,7 +31,7 @@ const Login = () => {
       .then((res) => {
         console.log(res);
         swal("Login Successful", "Welcome back!", "success");
-        navigate("/");
+        navigate(location?.state? location.state : "/" );
       })
       .catch((error) => console.error(error));
   };
