@@ -8,40 +8,39 @@ import Gallery from "../Pages/Gallery/Gallery";
 import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
 
-
-
 const Router = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
         path: "/",
-        element: <MainLayout></MainLayout> ,
-        errorElement: <ErrorPage></ErrorPage>,
-        children: [
-            {
-                path: "/",
-                element: <Home></Home>
-            },
-            {
-                path: "/about",
-                element: <About></About>
-            },
-            {
-                path: "/contact",
-                element: <Contact></Contact>
-            },
-            {
-                path: "/gallery",
-                element: <Gallery></Gallery>
-            },
-            {
-                path: "/login",
-                element: <Login></Login>
-            },
-            {
-                path: "/signup",
-                element: <Signup></Signup>
-            }
-        ]
-    }
-])
+        element: <Home></Home>,
+        loader: () => fetch('/events.json')
+      },
+      {
+        path: "/about",
+        element: <About></About>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
+      },
+      {
+        path: "/gallery",
+        element: <Gallery></Gallery>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/signup",
+        element: <Signup></Signup>,
+      },
+    ],
+  },
+]);
 
-export default Router
+export default Router;
