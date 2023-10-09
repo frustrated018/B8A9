@@ -3,8 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Signup = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, signInWithGoogle } = useContext(AuthContext);
   const navigate = useNavigate();
+
   const hadnleSignUp = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -22,6 +23,18 @@ const Signup = () => {
         console.error(error);
       });
   };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((res) => {
+        console.log(res);
+        navigate("/");
+      })
+      .catch((error) => console.error(error));
+  };
+
+
+  
   return (
     <>
       <div className="hero">
@@ -75,9 +88,12 @@ const Signup = () => {
 
               <p className="text-center font-bold">Or</p>
 
-              <button className="w-3/4 px-3 py-2 rounded-lg bg-blue-200 mx-auto font-bold">
-                  Google
-                </button>
+              <button
+                onClick={handleGoogleSignIn}
+                className="w-3/4 px-3 py-2 rounded-lg bg-blue-200 mx-auto font-bold"
+              >
+                Google
+              </button>
             </form>
 
             {/* Registration and SignUp toggle */}
