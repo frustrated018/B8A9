@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import swal from "sweetalert";
 
 const Login = () => {
   const { logInUser, signInWithGoogle } = useContext(AuthContext);
@@ -13,6 +14,7 @@ const Login = () => {
     logInUser(email, password)
       .then((res) => {
         console.log(res.user);
+        swal("Login Successful", "Welcome back!", "success");
         e.target.reset();
         navigate("/");
       })
@@ -24,6 +26,7 @@ const Login = () => {
     signInWithGoogle()
       .then((res) => {
         console.log(res);
+        swal("Login Successful", "Welcome back!", "success");
         navigate("/");
       })
       .catch((error) => console.error(error));
