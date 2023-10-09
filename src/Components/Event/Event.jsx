@@ -2,9 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Event = ({ eventData }) => {
-  const { description, id, event_name, img,} =
-    eventData;
-
+  const { description, id, event_name, img } = eventData;
 
   return (
     <div>
@@ -22,9 +20,9 @@ const Event = ({ eventData }) => {
           <p className="mb-8 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
             {description}
           </p>
-          <Link to={`/event/${id}`} state={event_name} >
+          <Link to={`/event/${id}`} state={event_name}>
             <button
-              className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-yellow-500 transition-all hover:bg-yellow-500/10 active:bg-yellow-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold text-yellow-500 transition-all hover:bg-yellow-500/10 active:bg-yellow-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="button"
             >
               Book A date

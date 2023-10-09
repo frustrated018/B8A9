@@ -47,7 +47,7 @@ const Login = () => {
                 <input
                 name="password"
                   type="password"
-                  placeholder="password"
+                  placeholder="Password"
                   className="input input-bordered"
                   required
                 />
