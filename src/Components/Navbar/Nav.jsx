@@ -45,20 +45,6 @@ const Nav = () => {
             </li>
             <li className=" text-lg font-normal">
               <NavLink
-                to="/about"
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? "pending"
-                    : isActive
-                    ? " text-yellow-500 underline font-bold"
-                    : ""
-                }
-              >
-                About
-              </NavLink>
-            </li>
-            <li className=" text-lg font-normal">
-              <NavLink
                 to="/blog"
                 className={({ isActive, isPending }) =>
                   isPending
