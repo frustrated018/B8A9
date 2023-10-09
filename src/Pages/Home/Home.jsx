@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Events from "../../Components/Events/Events";
 import Slider from "../../Components/Slider/Slider";
+import UserReview from "../../Components/UserReview/UserReview";
 
 const Home = () => {
   const events = useLoaderData();
@@ -14,6 +15,9 @@ const Home = () => {
         </h2>
         <div className="mb-10">
           <Events events={events}></Events>
+        </div>
+        <div className="my-8">
+          <UserReview></UserReview>
         </div>
       </div>
     </div>
