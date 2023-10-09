@@ -2,13 +2,14 @@ import PropTypes from "prop-types";
 import { BsPerson } from "react-icons/bs";
 import { BiSolidDollarCircle } from "react-icons/bi";
 import { BsFillBuildingsFill } from "react-icons/bs";
+import swal from "sweetalert";
 
 const DetailsBanner = ({ event }) => {
   const { longer_description, event_name, img, price, seating_size, venue_name } =
     event;
 
     const handleBooking = () =>{
-        alert("thank you for booking with us")
+        swal("Booking Successfull", "Thank you for booking with us", "success")
     }
 
   return (
