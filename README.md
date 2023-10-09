@@ -17,10 +17,6 @@ This web application facilitates event management, allowing users to create, man
 - **Event Details**: Users can click on individual event cards to view detailed information, including event name, date, time, location, and a description.
 - **User Profile**: Users have a dedicated profile page where they can view and manage their created events and events they plan to attend.
 
-### Event Attendance
-
-- **Attending Events**: Users can indicate their attendance at events by clicking an "Attend" button on event detail pages.
-- **Event Participants**: Event creators can view a list of participants who have indicated their attendance.
 
 ### Security and Authorization
 
