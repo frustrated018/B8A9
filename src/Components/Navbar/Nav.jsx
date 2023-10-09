@@ -59,7 +59,7 @@ const Nav = () => {
             </li>
             <li className=" text-lg font-normal">
               <NavLink
-                to="/contact"
+                to="/blog"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
@@ -68,7 +68,7 @@ const Nav = () => {
                     : ""
                 }
               >
-                Contact
+                Blog
               </NavLink>
             </li>
             <li className=" text-lg font-normal">

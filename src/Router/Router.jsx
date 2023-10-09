@@ -3,12 +3,11 @@ import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home/Home";
 import ErrorPage from "../Pages/Error/ErrorPage";
 import About from "../Pages/About/About";
-import Contact from "../Pages/Contact/Contact";
 import Gallery from "../Pages/Gallery/Gallery";
 import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
 import EventDetails from "../Pages/EventDetails/EventDetails";
-import PrivateRoute from "./PrivateRoute";
+import Blog from "../Pages/Blog/Blog";
 
 const Router = createBrowserRouter([
   {
@@ -31,8 +30,8 @@ const Router = createBrowserRouter([
         element: <About></About>,
       },
       {
-        path: "/contact",
-        element: <PrivateRoute><Contact></Contact></PrivateRoute>,
+        path: "/blog",
+        element: <Blog></Blog> ,
       },
       {
         path: "/gallery",

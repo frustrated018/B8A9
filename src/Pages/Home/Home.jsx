@@ -2,7 +2,8 @@ import { useLoaderData } from "react-router-dom";
 import Events from "../../Components/Events/Events";
 import Slider from "../../Components/Slider/Slider";
 import UserReview from "../../Components/UserReview/UserReview";
-import Faq from "../../Faq/Faq";
+import Faq from "../../Components/Faq/Faq";
+import Footer from "../../Components/Footer/Footer";
 
 const Home = () => {
   const events = useLoaderData();
@@ -22,6 +23,9 @@ const Home = () => {
         </div>
         <div className="my-8">
           <Faq></Faq>
+        </div>
+        <div className="mt-8">
+          <Footer></Footer>
         </div>
       </div>
     </div>
