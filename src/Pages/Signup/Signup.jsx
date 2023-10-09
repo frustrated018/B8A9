@@ -1,19 +1,22 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Signup = () => {
   const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const hadnleSignUp = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const name = e.target.name.value;
+    // const name = e.target.name.value;
 
     // Cretate user function call
     createUser(email, password)
-      .then(res => {
+      .then((res) => {
         console.log(res);
+        e.target.reset();
+        navigate("/");
       })
       .catch((error) => {
         console.error(error);
@@ -69,6 +72,12 @@ const Signup = () => {
                   Sign Up
                 </button>
               </div>
+
+              <p className="text-center font-bold">Or</p>
+
+              <button className="w-3/4 px-3 py-2 rounded-lg bg-blue-200 mx-auto font-bold">
+                  Google
+                </button>
             </form>
 
             {/* Registration and SignUp toggle */}

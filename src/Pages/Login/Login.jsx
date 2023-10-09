@@ -1,22 +1,24 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
-    const {logInUser} = useContext(AuthContext)
+  const { logInUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const hadnleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
 
     logInUser(email, password)
-    .then(res =>{
+      .then((res) => {
         console.log(res.user);
-    })
-    .catch(error =>{
+        e.target.reset();
+        navigate("/");
+      })
+      .catch((error) => {
         console.error(error);
-    })
-
+      });
   };
 
   return (
@@ -33,7 +35,7 @@ const Login = () => {
                   <span className="label-text font-semibold">Email</span>
                 </label>
                 <input
-                 name="email"
+                  name="email"
                   type="email"
                   placeholder="email"
                   className="input input-bordered"
@@ -45,7 +47,7 @@ const Login = () => {
                   <span className="label-text font-semibold">Password</span>
                 </label>
                 <input
-                name="password"
+                  name="password"
                   type="password"
                   placeholder="Password"
                   className="input input-bordered"
@@ -62,14 +64,14 @@ const Login = () => {
             {/* Registration and Login toggle */}
 
             <p className="text-center text-sm px-2 py-2 font-semibold">
-              New to Eventador? 
+              New to Eventador?
             </p>
             <p className="text-center text-sm px-2 mb-2 font-semibold">
-              Consider 
-                <Link to="/signup">
-                  <button className="link link-accent">Signing Up!</button>
-                </Link>
-              </p>
+              Consider
+              <Link to="/signup">
+                <button className="link link-accent">Signing Up!</button>
+              </Link>
+            </p>
           </div>
         </div>
       </div>
