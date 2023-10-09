@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Event = ({ eventData }) => {
-  const { description, id, event_name, img, price, seating_size, venue_name } =
+  const { description, id, event_name, img,} =
     eventData;
 
 
