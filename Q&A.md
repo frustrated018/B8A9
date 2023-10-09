@@ -1,4 +1,5 @@
 1. Answer : A
+
 Explanation : In this code, there's a typo in the variable name. It should be greeting instead of greetign. Since greetign is not defined, JavaScript treats it as an undeclared variable, and it won't throw a ReferenceError. Instead, it creates a new global variable greetign and assigns an empty object to it. So, the correct answer is option A, which prints an empty object {} to the console.
 
 2. Answer : C
