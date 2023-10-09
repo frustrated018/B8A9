@@ -5,8 +5,11 @@ import UserReview from "../../Components/UserReview/UserReview";
 import Faq from "../../Components/Faq/Faq";
 import Footer from "../../Components/Footer/Footer";
 
+
+
 const Home = () => {
   const events = useLoaderData();
+
 
   return (
     <div>
