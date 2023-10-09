@@ -1,12 +1,23 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Signup = () => {
+  const { createUser } = useContext(AuthContext);
   const hadnleSignUp = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     const name = e.target.name.value;
-    console.log(email, password, name);
+
+    // Cretate user function call
+    createUser(email, password)
+      .then(res => {
+        console.log(res);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
   return (
     <>
@@ -22,7 +33,7 @@ const Signup = () => {
                   <span className="label-text font-semibold">Name</span>
                 </label>
                 <input
-                 name="name"
+                  name="name"
                   type="text"
                   placeholder="Your Name"
                   className="input input-bordered"
@@ -34,7 +45,7 @@ const Signup = () => {
                   <span className="label-text font-semibold">Email</span>
                 </label>
                 <input
-                 name="email"
+                  name="email"
                   type="email"
                   placeholder="email"
                   className="input input-bordered"
@@ -46,7 +57,7 @@ const Signup = () => {
                   <span className="label-text font-semibold">Password</span>
                 </label>
                 <input
-                name="password"
+                  name="password"
                   type="password"
                   placeholder="password"
                   className="input input-bordered"
@@ -55,7 +66,7 @@ const Signup = () => {
               </div>
               <div className="form-control mt-6">
                 <button className="w-3/4 px-3 py-2 rounded-lg bg-yellow-400 mx-auto font-bold">
-                  Sign Up 
+                  Sign Up
                 </button>
               </div>
             </form>
@@ -63,14 +74,14 @@ const Signup = () => {
             {/* Registration and SignUp toggle */}
 
             <p className="text-center text-sm px-2 py-2 font-semibold">
-              Already a Member? 
+              Already a Member?
             </p>
             <p className="text-center text-sm px-2 mb-2 font-semibold">
               Click here to
-                <Link to="/signup">
-                  <button className="link link-accent">Login!</button>
-                </Link>
-              </p>
+              <Link to="/signup">
+                <button className="link link-accent">Login!</button>
+              </Link>
+            </p>
           </div>
         </div>
       </div>
